@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="index.css" />
+	<script src="index.js"></script>
+</head>
+
+<body>
+	<div class="row">
+		<div class="banner"></div>
+	</div>
+	<h1>Favorite Drinks</h1>
+	<p>
+		Lorem ipsum dolor sit amet, nobis diceret eos ut, ex duis nonumy admodum sed, te ius patrioque torquatos
+		intellegam. Ius malorum sanctus conceptam id, eos choro omnium scaevola ex. Sumo suas labores vix et, ea wisi
+		consul sea. Amet perpetua repudiandae ad eam, at suas conceptam vix. Ei vim cibo tempor petentium.
+	</p>
+
+	<div class="images">
+		<div class="col-4">
+			<img src="img/brandy.jpg" />
+		</div>
+		<div class="col-4">
+			<img src="img/gin.jpg" />
+		</div>
+		<div class="col-4">
+			<img src="img/rum.jpg" />
+		</div>
+		<div class="col-4">
+			<img src="img/tequila.jpg" />
+		</div>
+		<div class="col-4">
+			<img src="img/vodka.jpg" />
+		</div>
+		<div class="col-4">
+			<img src="img/whiskey.jpg" />
+		</div>
+	</div>
+	<script>
+		function loadMore() {
+			const imageSrc = grabImages();
+			createImages(imageSrc);
+		}
+	</script>
+	<div class="row">
+		<div class="button" onclick="loadMore()">Load More</div>
+	</div>
+	<div id="device"></div>
+	<div class="row footer">
+		<div class="d-flex">
+			<a href="mailto:ryan@tipsybartender.com">Contact Us</a>
+			<a href="mailto:wrongemail@tipsybartender.com">Contact Support</a>
+			<a href="https://ericbellamy.github.io/tester/privacy.html">privacy</a>
+			<a href="http://ericbellamy.github.io/tester/terms.html">terms</a>
+		</div>
+	</div>
+	<script>
+		const platforms = {
+			"OS X": "Apple",
+			"Android": "Android",
+			"Linux": "Linux",
+			"chrome": "Google Chrome",
+			"safari": "Safari"
+		};
+		function updateDeviceType() {
+			const ele = document.querySelector('#device');
+			const UA = navigator.userAgent;
+
+			let platform, browser;
+
+			let textString = `You are connecting from `;
+			if (UA.indexOf("OS X") != -1) {
+				platform = platforms["OS X"];
+				textString += "an OS X";
+			} else if (UA.indexOf("Android") != -1) {
+				platform = platforms["android"];
+				textString += "an Android";
+			} else if (UA.indexOf("Linux") != -1) {
+				platform = platforms["Linux"];
+				textString += "a Linux";
+			} else {
+				platform = "Unknown";
+				textString += "Unknown";
+			}
+			textString += ` device using `;
+
+			if (UA.indexOf("Chrome") != -1) {
+				browser = platforms["Chrome"];
+				textString += "Google Chrome";
+			} else if (UA.indexOf("Safari") != -1) {
+				browser = platforms["safari"];
+				textString += "Safari";
+			} else {
+				browser = "Unknown";
+				textString += "Unknown";	
+			}
+
+			if(platform === undefined){
+				throw new Error(`PLATFORM ERROR FOR UA: ${UA}`);
+			} else if(browser === undefined){
+				throw new Error(`BROWSER ERROR FOR UA: ${UA}`);
+			}
+			ele.innerHTML = textString;
+		}
+
+		updateDeviceType();
+	</script>
+</body>
+
+</html>

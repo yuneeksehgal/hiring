@@ -1,0 +1,59 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+h1, p, .row, .images {
+	padding: 1rem;
+}
+body {
+	max-width: 1000px;
+	margin: 0 auto;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.banner {
+	background: black;
+	padding-bottom: 25.9%;
+	background: url('img/banner.png');
+	background-size: 110%;
+	background-repeat: no-repeat;
+	border: 1px solid #ccc;
+}
+
+.images {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -0.5rem;
+}
+.col-4 {
+	flex: 0 0 33.3333%;
+	max-width: 33.3333%;
+	padding: 0 0.5rem;
+	margin-bottom: 1rem;
+}
+img {
+	width: 100%;
+}
+
+.button {
+	background: #222;
+	color: #fff;
+	padding: 1.5rem 4rem;
+	display: inline-block;
+	cursor: pointer;
+	box-shadow: 0 0 10px 5px #e3e3e3;
+}
+
+#device {
+	margin-top: 1rem;
+	padding: 0 1rem;
+}
+
+.footer {
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+.footer a {
+	padding: 0 1rem;
+}
