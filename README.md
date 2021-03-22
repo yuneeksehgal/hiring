@@ -1,4 +1,4 @@
-Please test this with Android, Google Chrome and any other devices & browsers you have available.
+Please test this with Android, Google Chrome, Safari and any other devices & browsers you have available.
 
 Instructions:
 * Initialize this github repo locally
