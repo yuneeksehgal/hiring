@@ -1,0 +1,24 @@
+{
+  "name": "upwork",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -p 3000 & node ngrok.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricBellamy/hiring.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EricBellamy/hiring/issues"
+  },
+  "homepage": "https://github.com/EricBellamy/hiring#readme",
+  "dependencies": {
+    "http-server": "^0.12.3",
+    "ngrok": "^3.4.1",
+    "terminal-link": "^2.1.1"
+  }
+}
