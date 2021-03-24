@@ -9,6 +9,14 @@ Instructions:
 
 &nbsp;
 
+If the start command does not work on your computer, using 2 terminals you can try:
+* npm run server
+* npm run ngrok
+
+If these do not work, there's an error specific to your system.
+
+&nbsp;
+
 Create a pull request from a new branch and add to this file:
 * Your findings 
 * Loom URL from the upwork post.
